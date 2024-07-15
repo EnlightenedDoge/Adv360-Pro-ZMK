@@ -49,8 +49,7 @@
         invoke_macro_glaze: invoke_macro_glaze {
             compatible = "zmk,behavior-hold-tap";
             label = "INVOKE_MACRO_GLAZE";
-            bindings = <&alt_glaze_2nd>, <&alt_glaze_main>;
-
+            bindings = <&alt_glaze_main>;
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             flavor = "tap-preferred";
