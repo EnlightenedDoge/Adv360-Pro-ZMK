@@ -22,22 +22,14 @@
         alt_glaze_second: alt_glaze_second {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>,
-                <&macro_release>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>;
             label = "ALT_GLAZE_SECOND";
         };
 
         alt_glaze_main: alt_glaze_main {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT_ALT>,
-                <&macro_release>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT_ALT>;
             label = "ALT_GLAZE_MAIN";
         };
 
@@ -59,6 +51,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <5000>;
+            hold-while-undecided;
         };
     };
 
