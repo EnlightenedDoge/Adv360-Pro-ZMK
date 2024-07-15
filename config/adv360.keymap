@@ -20,7 +20,11 @@
         alt_glaze_2nd: alt_glaze_2nd {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>,
+                <&macro_release>;
+
             label = "ALT_GLAZE_2ND";
         };
 
@@ -28,8 +32,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
+                <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT_ALT>,
-                <&macro_press>;
+                <&macro_release>;
 
             label = "ALT_GLAZE_MAIN";
         };
@@ -104,11 +109,11 @@
 
         glaze_ws_switch {
             bindings = <
-&trans  &invoke_macro_glaze N1 N1  &invoke_macro_glaze N2 N2  &invoke_macro_glaze N3 N3  &invoke_macro_glaze N4 N4  &invoke_macro_glaze N5 N5  &trans                                      &trans  &invoke_macro_glaze N6 N6  &invoke_macro_glaze N7 N7  &invoke_macro_glaze N8 N8  &invoke_macro_glaze N9 N9  &invoke_macro_glaze N0 N0  &trans
-&trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans                                      &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
-&trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans  &trans  &trans      &trans  &trans  &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
-&trans  &trans                     &trans                     &trans                     &trans                     &trans                                     &trans      &trans                  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
-&trans  &trans                     &trans                     &trans                     &trans                                                &trans  &trans  &trans      &trans  &trans  &trans                             &trans                     &trans                     &trans                     &trans                     &trans
+&trans  &invoke_macro_glaze N1  &invoke_macro_glaze N2 N2  &invoke_macro_glaze N3 N3  &invoke_macro_glaze N4 N4  &invoke_macro_glaze N5 N5  &trans                                      &trans  &invoke_macro_glaze N6 N6  &invoke_macro_glaze N7 N7  &invoke_macro_glaze N8 N8  &invoke_macro_glaze N9 N9  &invoke_macro_glaze N0 N0  &trans
+&trans  &trans                  &trans                     &trans                     &trans                     &trans                     &trans                                      &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
+&trans  &trans                  &trans                     &trans                     &trans                     &trans                     &trans  &trans  &trans      &trans  &trans  &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
+&trans  &trans                  &trans                     &trans                     &trans                     &trans                                     &trans      &trans                  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
+&trans  &trans                  &trans                     &trans                     &trans                                                &trans  &trans  &trans      &trans  &trans  &trans                             &trans                     &trans                     &trans                     &trans                     &trans
             >;
         };
     };
