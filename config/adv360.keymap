@@ -17,7 +17,7 @@
             bindings = <&kp RET>;
         };
 
-        alt_glaze_2nd: alt_glaze_2nd {
+        alt_glaze_second: alt_glaze_second {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -25,7 +25,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>,
                 <&macro_release>;
 
-            label = "ALT_GLAZE_2ND";
+            label = "ALT_GLAZE_SECOND";
         };
 
         alt_glaze_main: alt_glaze_main {
@@ -54,7 +54,7 @@
         invoke_macro_glaze: invoke_macro_glaze {
             compatible = "zmk,behavior-hold-tap";
             label = "INVOKE_MACRO_GLAZE";
-            bindings = <&alt_glaze_2nd>, <&alt_glaze_main>;
+            bindings = <&alt_glaze_second>, <&alt_glaze_main>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
