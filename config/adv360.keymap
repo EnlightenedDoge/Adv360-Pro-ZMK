@@ -24,7 +24,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp F1 &kp LALT &macro_param_1to1>,
+                <&kp LALT &kp F1 &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
@@ -69,7 +69,8 @@
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_press>;
 
             label = "AS";
         };
@@ -103,6 +104,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
+            flavor = "tap-preferred";
         };
     };
 
