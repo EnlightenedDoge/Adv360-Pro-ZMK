@@ -24,9 +24,11 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>,
+                <&kp F1 &kp LALT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp F1 &kp LALT>;
+                <&kp F1 &kp LALT>;
 
             label = "ALT_GLAZE_SECOND";
         };
@@ -36,9 +38,11 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT_ALT>,
+                <&kp LEFT_ALT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LALT>;
+                <&kp LALT>;
 
             label = "ALT_GLAZE_MAIN";
         };
