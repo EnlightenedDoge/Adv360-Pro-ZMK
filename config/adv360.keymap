@@ -105,7 +105,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <5000>;
             hold-while-undecided;
         };
