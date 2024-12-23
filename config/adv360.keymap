@@ -119,6 +119,13 @@
             tapping-term-ms = <190>;
             flavor = "tap-preferred";
         };
+
+        f1_or_layer_bhvr: f1_or_layer_bhvr {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F1_OR_LAYER_BHVR";
+            #binding-cells = <0>;
+            bindings = <&kp F1>, <&tog 5>;
+        };
     };
 
     macros {
@@ -129,11 +136,11 @@
 
         default_layer {
             bindings = <
-&as EQUAL  &as N1     &as N2    &as N3    &as N4     &as N5  &tog 1                                                      &mo 3      &as N6  &as N7  &as N8     &as N9    &as N0    &as MINUS
-&kp TAB    &as Q      &as W     &as E     &as R      &as T   &kp F1                                                      &none      &as Y   &as U   &as I      &as O     &as P     &as BSLH
-&kp ESC    &as A      &as S     &as D     &as F      &as G   &lt 4 SPACE  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &ln_chg    &as H   &as J   &as K      &as L     &as SEMI  &as SQT
-&kp LSHFT  &as Z      &as X     &as C     &as V      &as B                           &kp HOME      &kp PG_UP                        &as N   &as M   &as COMMA  &as DOT   &as FSLH  &kp RSHFT
-&mo 2      &as GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC     &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &tog 2
+&as EQUAL  &as N1     &as N2    &as N3    &as N4     &as N5  &tog 1                                                               &mo 3      &as N6  &as N7  &as N8     &as N9    &as N0    &as MINUS
+&kp TAB    &as Q      &as W     &as E     &as R      &as T   &kp F1                                                               &none      &as Y   &as U   &as I      &as O     &as P     &as BSLH
+&kp ESC    &as A      &as S     &as D     &as F      &as G   &mo 4     &kp LCTRL  &kp LALT            &kp LGUI         &kp RCTRL  &ln_chg    &as H   &as J   &as K      &as L     &as SEMI  &as SQT
+&kp LSHFT  &as Z      &as X     &as C     &as V      &as B                        &kp LEFT_SHIFT      &kp RIGHT_SHIFT                        &as N   &as M   &as COMMA  &as DOT   &as FSLH  &kp RSHFT
+&mo 2      &as GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END             &kp HOME         &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &tog 2
             >;
         };
 
@@ -174,6 +181,16 @@
 &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans  &trans  &trans      &trans  &trans  &trans  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
 &trans  &trans                     &trans                     &trans                     &trans                     &trans                                     &trans      &trans                  &trans                     &trans                     &trans                     &trans                     &trans                     &trans
 &trans  &trans                     &trans                     &trans                     &trans                                                &trans  &trans  &trans      &trans  &trans  &trans                             &trans                     &trans                     &trans                     &trans                     &trans
+            >;
+        };
+
+        one_hand_layer {
+            bindings = <
+&trans  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH                                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp APOS   &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH                        &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LBKT   &kp RBKT            &kp SPACE  &kp ENTER  &tog 5      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
