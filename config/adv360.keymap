@@ -148,19 +148,19 @@
             bindings = <
 &as EQUAL  &as N1     &as N2    &as N3    &as N4     &as N5  &tog 1                                                                                                              &mo 3      &as N6  &as N7  &as N8     &as N9    &as N0    &as MINUS
 &kp TAB    &as Q      &as W     &as E     &as R      &as T   &kp F1                                                                                                              &none      &as Y   &as U   &as I      &as O     &as P     &as BSLH
-&kp ESC    &as A      &as S     &as D     &as F      &as G   &tog 5    &kp LCTRL  &kp LALT                                   &kp LGUI                                 &kp RCTRL  &ln_chg    &as H   &as J   &as K      &as L     &as SEMI  &as SQT
-&kp LSHFT  &as Z      &as X     &as C     &as V      &as B                        &sticky_or_hold LEFT_SHIFT LEFT_SHIFT      &sticky_or_hold RIGHT_SHIFT RIGHT_SHIFT                        &as N   &as M   &as COMMA  &as DOT   &as FSLH  &kp RSHFT
-&mo 2      &as GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END                                    &kp HOME                                 &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &tog 2
+&kp ESC    &as A      &as S     &as D     &as F      &as G   &tog 5    &sticky_or_hold LEFT_SHIFT LEFT_SHIFT  &kp LALT       &kp LGUI   &sticky_or_hold RIGHT_SHIFT RIGHT_SHIFT  &ln_chg    &as H   &as J   &as K      &as L     &as SEMI  &as SQT
+&kp LSHFT  &as Z      &as X     &as C     &as V      &as B                                                    &kp LCTRL      &kp RCTRL                                                      &as N   &as M   &as COMMA  &as DOT   &as FSLH  &kp RSHFT
+&mo 2      &as GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL                                &kp END        &kp HOME   &kp ENTER                                &kp SPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &tog 2
             >;
         };
 
         keypad {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                            &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                             &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &trans   &trans      &trans  &trans     &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                      &trans      &trans                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL  &trans      &trans  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
