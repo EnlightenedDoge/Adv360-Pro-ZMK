@@ -93,10 +93,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp F2 &kp GRAVE>,
+                <&kp F2 &kp EQUAL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp F2 &kp GRAVE>;
+                <&kp F2 &kp EQUAL>;
 
             label = "COMBO";
         };
