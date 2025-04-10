@@ -88,6 +88,19 @@
             label = "LN_CHG";
         };
 
+        combo_glaze: combo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp F2 &kp GRAVE>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp F2 &kp GRAVE>;
+
+            label = "COMBO";
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -141,7 +154,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GLAZE_TOGGLE_BHV";
             #binding-cells = <0>;
-            bindings = <&kp F2>, <&kp F3>;
+            bindings = <&kp F2>, <&combo_glaze>;
         };
     };
 
